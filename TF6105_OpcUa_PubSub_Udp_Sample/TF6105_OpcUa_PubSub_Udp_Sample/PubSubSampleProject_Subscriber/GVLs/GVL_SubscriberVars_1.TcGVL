@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.6">
+  <GVL Name="GVL_SubscriberVars_1" Id="{63468c5a-2213-46af-b2fb-0f7e2c930c8a}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+(* This GVL contains variables that are defined as output variables for process image mapping *)
+VAR_GLOBAL
+	nCounter AT%I* : INT;
+	sString AT%I* : STRING(42);
+	stMyStruct AT%I* : ST_MyStructure;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

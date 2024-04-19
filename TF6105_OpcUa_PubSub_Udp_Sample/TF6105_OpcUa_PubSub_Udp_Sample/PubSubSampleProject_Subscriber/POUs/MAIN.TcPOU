@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.6">
+  <POU Name="MAIN" Id="{225276f4-f31f-4f21-8ba3-b7bdd5448109}" SpecialFunc="None">
+    <Declaration><![CDATA[(* This sample demonstrates how to configure TF6105 OPC UA Pub/Sub with a publisher and a subscriber. This PLC Project contains the subscriber. *)
+PROGRAM MAIN
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

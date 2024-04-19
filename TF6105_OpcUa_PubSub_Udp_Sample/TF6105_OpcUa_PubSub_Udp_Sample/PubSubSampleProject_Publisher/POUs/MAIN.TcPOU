@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.6">
+  <POU Name="MAIN" Id="{6d1821cd-9c49-47ff-8c55-c0c2dc703739}" SpecialFunc="None">
+    <Declaration><![CDATA[(* This sample demonstrates how to configure TF6105 OPC UA Pub/Sub with a publisher and a subscriber. This PLC Project contains the publisher.
+   The publisher comes in two flavors: one publisher that contains a data set WITH process image variables and one publisher that contains a 
+   data set WITHOUT process image variables. In this case the variables are mapped internally to the corresponding ADS symbol names. This can
+   be achieved by using the TwinCAT Target Browser to drag&drop variables onto the data set fields of the data set. 
+
+   The publishers on the OPC UA RT device have been set up manually whereas the corresponding subscribers have been set up by using the 
+   OPC UA Binary exchange file.
+
+   Please consult our documentation on the Beckhoff Information System for more information. *)
+PROGRAM MAIN
+VAR
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(* Update publisher variables 1 with random values *)
+GVL_PublisherVars_1.sString := CONCAT('Hello World ', TO_STRING(GVL_PublisherVars_1.nCounter));
+GVL_PublisherVars_1.stMyStruct.a := GVL_PublisherVars_1.stMyStruct.a + 1;
+GVL_PublisherVars_1.stMyStruct.b := GVL_PublisherVars_1.stMyStruct.b + 1;
+GVL_PublisherVars_1.stMyStruct.c := GVL_PublisherVars_1.stMyStruct.c + 0.1;
+GVL_PublisherVars_1.stMyStruct.d := CONCAT('Hello World ', TO_STRING(GVL_PublisherVars_1.nCounter));
+GVL_PublisherVars_1.nCounter := GVL_PublisherVars_1.nCounter + 1;
+
+(* Update publisher variables 2 with random values *)
+GVL_PublisherVars_2.sString := CONCAT('Hello World ', TO_STRING(GVL_PublisherVars_2.nCounter));
+GVL_PublisherVars_2.stMyStruct.a := GVL_PublisherVars_2.stMyStruct.a + 1;
+GVL_PublisherVars_2.stMyStruct.b := GVL_PublisherVars_2.stMyStruct.b + 1;
+GVL_PublisherVars_2.stMyStruct.c := GVL_PublisherVars_2.stMyStruct.c + 0.1;
+GVL_PublisherVars_2.stMyStruct.d := CONCAT('Hello World ', TO_STRING(GVL_PublisherVars_2.nCounter));
+GVL_PublisherVars_2.nCounter := GVL_PublisherVars_2.nCounter + 1;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

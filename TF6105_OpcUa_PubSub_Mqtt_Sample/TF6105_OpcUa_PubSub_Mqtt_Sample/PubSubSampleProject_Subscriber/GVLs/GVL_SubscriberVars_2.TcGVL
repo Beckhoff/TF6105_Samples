@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.6">
+  <GVL Name="GVL_SubscriberVars_2" Id="{81ecaf56-0a6c-4262-aaa1-0a4db0a1ac32}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+(* This GVL contains variables that are not defined as output variables *)
+VAR_GLOBAL
+	nCounter AT%I* : INT;
+	sString AT%I* : STRING(42);
+	stMyStruct AT%I* : ST_MyStructure;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

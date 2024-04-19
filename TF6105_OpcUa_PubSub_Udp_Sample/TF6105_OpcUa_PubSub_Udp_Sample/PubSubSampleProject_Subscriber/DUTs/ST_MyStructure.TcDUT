@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.6">
+  <DUT Name="ST_MyStructure" Id="{a6615924-00f7-4416-99f0-16efdb9d2f60}">
+    <Declaration><![CDATA[TYPE ST_MyStructure :
+STRUCT
+	a : INT;
+	b : DINT;
+	c : REAL;
+	d : STRING(42);
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
